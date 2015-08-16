@@ -1,0 +1,52 @@
+<header class="business-header"
+  <div class="container">
+    <h1 class="tagline">Get a Job on Rails</h1>
+  </div>
+</header>
+
+<div class="container">
+  <div class="col-md-offset-2 col-md-8 list-group">
+    <% @jobs.each do |job| %>
+      <a href="<%= job_path(job) %>" class="list-group-item">
+          <div class="type-label">
+            <%= job.job_type %>
+          </div>
+          <div class="job-title">
+            <h4><%= job.title %></h4>
+            <p>
+              <span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span>
+              <%= job.company_name%>
+              <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+              <%= job.location%>
+            </p>
+            
+          </div>
+      </a>
+    <% end %>
+    <%= link_to "test",new_job_path%>
+  </div>
+</div>
+
+<style type="text/css">
+  .job-section{
+    font-size: 20px;
+    border-radius:5px;
+    border: solid 1px #DDD ;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: white;
+  }
+  .job-title{
+    display: inline-block; 
+  }
+  .type-label{
+    color: black;
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    padding: 2px 10px;
+    background-color: #FCAD77;
+    margin: 0 auto;
+  }
+
+</style>

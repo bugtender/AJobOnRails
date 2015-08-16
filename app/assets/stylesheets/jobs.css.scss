@@ -1,0 +1,24 @@
+// Place all the styles related to the jobs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+  
+.business-header {
+    height: 400px;
+    background: image-url("the_road.jpg") center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.tagline{
+  display: inline;
+  margin: 0 auto;
+  padding-left: 10%;
+  text-align:left; 
+  height:400px; 
+  line-height:400px;
+  text-shadow: 0 0 10px #000;
+  color: #fff;
+}
