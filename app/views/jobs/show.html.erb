@@ -1,8 +1,23 @@
 <div class="container">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3 page">
 
-    <h2><small><%= @job.job_type%></small><%= @job.title%></h2>
+    <div class="job-label"><%= @job.job_type%></div>
+    <h2><%= @job.title%></h2>
+    
+    <p>
+    <span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span>
+        <%= @job.company_name%>
+        </p>
+    <div class="job-area">
+      <p>
+        <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+        <%= @job.location%>
+      </p>
+      <p>
+        
+      </p>
 
+    </div>
     <p> 
       <%= @job.description%>
     </p>
@@ -15,3 +30,32 @@
   </div>
 </div>
 
+<style type="text/css">
+  .page{
+    margin-top:20px;
+    border-radius: 5px;
+    border: solid 1px #DDD ;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: white;
+  }
+
+  .job-label{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    
+    color: black;
+    text-align: center;
+    display: inline-block;
+
+    background-color: #FCAD77;
+    width: 100px;
+    padding: 3px 10px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 2px #222
+  }
+  .job-area{
+
+  }
+</style>

@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 
+gem 'nokogiri'
+gem 'whenever'
 gem 'font-awesome-sass', '~> 4.3.0'
 gem 'bootstrap-sass', '~> 3.3.4'
 
