@@ -34,7 +34,10 @@ body{
   font-weight: 700;
   color: #fff;
 }
-
+.navbar-default .navbar-brand:hover, 
+.navbar-default .navbar-brand:focus {
+  color: #f8bbd0;
+}
 .navbar-fixed-top {
   border-color:  #932a2a;
   border-width: 0 0 1px;
@@ -48,8 +51,34 @@ a {
  text-decoration:none;  
 }  
 
+.navbar-default .navbar-nav > li > a {
+  color:white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus{
+  color:#f8bbd0;
+}
+
+
+.navbar-default .navbar-nav >  .navbar-text > a {
+  color:white;
+}
+.navbar-default .navbar-nav > .navbar-text :hover,
+.navbar-default .navbar-nav >  .navbar-text > a:focus{
+  color:#f8bbd0;
+}
+
 a:hover, a:focus {
   color: #23527c;
   text-decoration:none;
 }
 
+
+.page{
+  margin-top:20px;
+  border-radius: 5px;
+  border: solid 1px #DDD ;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: white;
+}

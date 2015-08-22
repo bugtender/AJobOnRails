@@ -8,54 +8,22 @@
   <div class="col-md-offset-2 col-md-8 list-group">
     <% @jobs.each do |job| %>
       <a href="<%= job_path(job) %>" class="list-group-item">
-          <div class="job-label">
-            <%= job.job_type %>
-          </div>
+          <%= type_label_selector(job.job_type) %>
           <div class="job-context">
             <h4><%= job.title %></h4>
             <p>
-              <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-              <%= job.location%>
               <span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span>
               <%= job.company_name%>
+              <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+              <%= job.location%>
+              <% if job.begginer %>
+                  <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true" style="color:#f44336;"></span>
+                  初學者可
+              <% end %>
             </p>
             
           </div>
       </a>
     <% end %>
-    <%= link_to "test",new_job_path%>
   </div>
 </div>
-
-<style type="text/css">
-  .job-section{
-    font-size: 20px;
-    border-radius:5px;
-    border: solid 1px #DDD ;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-    background-color: white;
-  }
-  .job-context{
-    display: inline-block; 
-    vertical-align: middle;
-    line-height: normal;
-  }
-  .job-label{
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
-    
-    color: black;
-    text-align: center;
-    display: inline-block;
-
-    background-color: #FCAD77;
-    width: 100px;
-    margin: 0px 15px;
-    padding: 3px 10px;
-
-    box-shadow: 1px 1px 2px #222
-  }
-
-</style>

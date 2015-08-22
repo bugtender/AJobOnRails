@@ -1,8 +1,10 @@
 class JobsController < ApplicationController
+  before_action :authenticate_user!,except:[:index,:show]
   before_action :set_job, only: [:show, :edit, :update, :destroy]
 
   def index
     @jobs = Job.all
+    render :layout => 'root'
   end
 
   def show

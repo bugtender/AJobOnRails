@@ -1,6 +1,6 @@
 
 <%= form_for(@job) do |f| %>
-  <div class="row">
+  <div>
     <% if @job.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@form.errors.count, "error") %> 
