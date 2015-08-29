@@ -1,6 +1,12 @@
 <div class="container">
   <div class="col-md-8 col-md-offset-2 page">
-    <h2><%= @job.title%></h2> 
+    <h2><%= @job.title%></h2>
+    <% if current_user && @job.user_id == current_user.id%>
+      <p>
+        <%= link_to "Edit", edit_job_path(@job), :class=>"btn btn-xs btn-warning"%>
+        <%= link_to "Delete",job_path(@job), :confirm => 'Are you sure?', :method => :delete , :class=>"btn btn-xs btn-danger"%>
+      </p>
+    <%end%>
     <hr>
     <%= type_label_selector(@job.job_type) %>
     <br>
@@ -25,7 +31,15 @@
     <% end %>
 
     <hr>
+    <% if @job.from %>
+      <div class="alert alert-success" role="alert">
+      <%= "此工作資訊來自 #{@job.from} ,如有資訊不明,"   %>
+      <%= link_to "可點此處瀏覽原始資訊", @job.from_url%>
+      </div>
+    <% end %>
+    
     <h4>工作內容</h4>
+
     <%= simple_format(@job.description)%>
 
     <% if @job.requirement %>

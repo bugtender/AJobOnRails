@@ -6,23 +6,29 @@
 
 <div class="container">
   <div class="col-md-offset-2 col-md-8 list-group">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
     <% @jobs.each do |job| %>
       <a href="<%= job_path(job) %>" class="list-group-item">
-          <%= type_label_selector(job.job_type) %>
-          <div class="job-context">
-            <h4><%= job.title %></h4>
-            <p>
-              <span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span>
-              <%= job.company_name%>
-              <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-              <%= job.location%>
-              <% if job.begginer %>
-                  <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true" style="color:#f44336;"></span>
-                  初學者可
-              <% end %>
-            </p>
-            
-          </div>
+        <%= type_label_selector(job.job_type) %>
+        <div class="job-context">
+          <h4><%= job.title %></h4>
+          <p>
+            <span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span>
+            <%= job.company_name%>
+            <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+            <%= job.location%>
+            <% if job.begginer %>
+                <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true" style="color:#f44336;"></span>
+                初學者可
+            <% end %>
+          </p>
+
+        </div>
       </a>
     <% end %>
   </div>

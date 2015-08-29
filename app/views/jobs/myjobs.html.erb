@@ -1,0 +1,14 @@
+<div class="container">
+  
+  <div class="col-md-offset-2 col-md-8 list-group">
+  <h2>Jobs posted by me</h2>
+    <% @jobs.each do |job| %>
+      <a href="<%= job_path(job) %>" class="list-group-item">
+        <%= type_label_selector(job.job_type) %>
+        <div class="job-context">
+          <h4><%= job.title %></h4>
+        </div>
+      </a>
+    <% end %>
+  </div>
+</div>

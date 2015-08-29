@@ -1,6 +1,10 @@
 class JobsController < ApplicationController
-  before_action :authenticate_user!,except:[:index,:show]
+  before_action :authenticate!,except:[:index,:show]
   before_action :set_job, only: [:show, :edit, :update, :destroy]
+
+  def myjobs
+    @jobs = current_user.jobs
+  end
 
   def index
     @jobs = Job.all
@@ -29,7 +33,7 @@ class JobsController < ApplicationController
     end
   end
   def create
-    @job = Job.new(job_params)
+    @job = current_user.jobs.build(job_params)
 
     respond_to do |format|
       if @job.save

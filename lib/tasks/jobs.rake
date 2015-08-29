@@ -54,11 +54,12 @@ namespace :jobs do
       salary_low    = salary[1].gsub(/\D/,'').to_i
       description   = job_page.content_between('//hr[2]','//a[@name="apply"]').map { |e| e.to_s.gsub("\n"," ") }
       des   = description.join("\r\n")
-      puts description
+      # puts description
       params = {
-        title:title,description:des,job_type:job_type,
+        title:title,job_type:job_type,
         location:location,salary_high:salary_high,salary_low:salary_low,
-        company_name:company_name,company_url:company_url,
+        company_name:company_name,company_url:company_url,description:des,
+        from:"Inside Jobs" ,from_url:job,
         apply_info:nil,begginer:false,user_id:1
       }
       puts params

@@ -15,11 +15,21 @@
 
         <li class=""><a href=<%=new_job_path%>>Post a new Job</a></li>
         <p class="navbar-text pull-right">
-          <% if user_signed_in? %>
-            Logged in as <strong><%= current_user.email %></strong>.
-            <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+          
+          <% if current_user %>
+            <li>
+              <%= link_to current_user.name , myjobs_path%>
+            </li>
+            <li id="user-widget">
+              <%= link_to "Sign out", signout_path, id: "sign_out" %>
+            </li>
+          <% else %>
+            <li id="user-widget">
+            <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+            </li>
           <% end %>
+          
+
           </p>
       </ul>
     </div>

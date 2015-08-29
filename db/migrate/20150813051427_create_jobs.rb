@@ -13,6 +13,8 @@ class CreateJobs < ActiveRecord::Migration
       t.text  :apply_info
       t.boolean :begginer
       t.integer :user_id
+      t.string :from , defult:nil
+      t.string :from_url , defult:nil
 
       t.timestamps null: false
     end
