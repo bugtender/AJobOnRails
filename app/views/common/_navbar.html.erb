@@ -11,9 +11,9 @@
     </div>
     <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href=<%=about_path%>>About</a></li>
+        <li class=""><a href=<%=about_path%>>關於</a></li>
 
-        <li class=""><a href=<%=new_job_path%>>Post a new Job</a></li>
+        <li class=""><a href=<%=new_job_path%>>張貼新工作</a></li>
         <p class="navbar-text pull-right">
           
           <% if current_user %>
@@ -21,11 +21,11 @@
               <%= link_to current_user.name , myjobs_path%>
             </li>
             <li id="user-widget">
-              <%= link_to "Sign out", signout_path, id: "sign_out" %>
+              <%= link_to "登出", signout_path, id: "sign_out" %>
             </li>
           <% else %>
             <li id="user-widget">
-            <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+            <%= link_to "使用臉書登入", "/auth/facebook", id: "sign_in" %>
             </li>
           <% end %>
           

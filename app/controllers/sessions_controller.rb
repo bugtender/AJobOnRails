@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def create
     user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
-    flash[:notice] = 'Wellcome!!'
+    flash[:notice] = '歡迎光臨 Job on Rails !!'
     redirect_to root_url
   end
 

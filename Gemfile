@@ -8,8 +8,7 @@ gem 'omniauth-facebook', '1.4.0'
 # figafiga
 gem 'figaro'
 
-gem 'nokogiri'
-gem 'whenever'
+# web design
 gem 'font-awesome-sass', '~> 4.3.0'
 gem 'bootstrap-sass', '~> 3.3.4'
 

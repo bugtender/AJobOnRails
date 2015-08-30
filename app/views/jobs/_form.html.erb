@@ -23,16 +23,16 @@
 
       <div class="field form-group">
         <%= f.label :title ,"工作職稱" %><br>
-        <%= f.text_field :title ,class:"form-control"%>
+        <%= f.text_field :title ,class:"form-control",placeholder:"ex. Ruby on Rails 工程師"%>
       </div>
 
       <div class="field form-group">
         <%= f.check_box :begginer%>
-        <%= f.label :begginer ,"新手可" %>
+        <%= f.label :begginer ,"是否適合新手？" %>
       </div>
 
       <div class="field form-inline form-group">
-        <%= f.label :title ,"薪資範圍" %><br>
+        <%= f.label :title ,"薪資範圍（NTD/月）" %><br>
         <div class="field form-group">
           <%= f.text_field :salary_low ,class:"form-control"%>
         </div>
@@ -44,17 +44,17 @@
 
       <div class="field form-group">
         <%= f.label :description ,"工作描述"%><br>
-        <%= f.text_area :description ,class:"form-control"%>
+        <%= f.text_area :description , rows:"5",class:"form-control",placeholder:"ex.使用Ruby on Rails 進行新網站設計開發 .."%>
       </div>
 
       <div class="field form-group">
         <%= f.label :requirement ,"應徵條件"%><br>
-        <%= f.text_area :requirement ,class:"form-control"%>
+        <%= f.text_area :requirement ,class:"form-control", rows:"3",class:"form-control",placeholder:"ex.Ruby on Rails, HTML / JavaScript / CSS, Git.."%>
       </div>
 
       <div class="field form-group">
         <%= f.label :location,"工作地點" %><br>
-        <%= f.text_field :location,class:"form-control"%>
+        <%= f.text_field :location,class:"form-control",placeholder:"ex.南港軟體園區, 西湖捷運站2號出口..."%>
       </div>
 
       <div class="field form-group">
@@ -69,11 +69,11 @@
 
       <div class="field form-group">
         <%= f.label :apply_info ,"應徵方式" %><br>
-        <%= f.text_field :apply_info ,class:"form-control"%>
+        <%= f.text_field :apply_info ,class:"form-control",placeholder:"ex.將履歷寄送至hr@mycompany.com"%>
       </div>
 
       <div class="actions">
-        <%= f.submit  :class => 'btn btn-success submit-form'%>
+        <%= f.submit "確認", :class => 'btn btn-success submit-form pull-right'%>
       </div>
     </div>
   </div>

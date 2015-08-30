@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   private
   def authenticate!
-     flash[:alert] = 'You need to log in before posting a new Job'
+     flash[:alert] = '必須登入才能張貼工作資訊喔'
      redirect_to root_path unless user_signed_in?
   end
 
