@@ -26,7 +26,7 @@ namespace :jobs do
       job_array << d['href']
     end
 
-    job_array.each do | job |
+    job_array.reverse.each do | job |
       job_page = Nokogiri::HTML(open(job))
       body = job_page.css('div').css('.panel-body')
 
