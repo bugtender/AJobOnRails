@@ -62,7 +62,7 @@ namespace :jobs do
         from:"Inside Jobs" ,from_url:job,
         apply_info:nil,begginer:false,user_id:1
       }
-      puts params.title
+      puts title
       Job.create(params)
     end
 
