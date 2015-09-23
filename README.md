@@ -6,6 +6,12 @@ A Job Board for Ruby or Rails Programmer in Taiwan.
 
 ![Main](http://i.imgur.com/FvLkMJF.jpg)
 
+
+##Job information from..
+
+- [Inside Job Board](https://jobs.inside.com.tw/)
+- [Ruby Taiwan Jobs](http://jobs.ruby.tw/)
+
 ##Tech Use
 
 - [Ruby on Rails](http://rubyonrails.org/) - the origin.
