@@ -7,7 +7,7 @@ class JobsController < ApplicationController
   end
 
   def index
-    @jobs = Job.all.order("created_at DESC")
+    @jobs = Job.where(:published => true).order("created_at DESC")
     render :layout => 'root'
   end
 

@@ -21,7 +21,11 @@
     </p>
     <p>
       <span class="glyphicon glyphicon glyphicon-usd" aria-hidden="true"></span>
+      <% if @job.salary_low == 0 and @job.salary_high == 0 %>
+      詳情參考工作內容
+      <% else %>
       NTD <%= @job.salary_low %> ~ <%= @job.salary_high %>
+      <% end %>
     </p>
     <% if @job.begginer %>
       <p>
@@ -38,19 +42,22 @@
       </div>
     <% end %>
     
-    <h4>工作內容</h4>
+    <h3><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
+      工作內容</h3>
 
     <%= simple_format(@job.description)%>
 
     <% if @job.requirement %>
-    <h4>應徵條件</h4>
+    <h3><span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+      應徵條件</h3>
     <p>
       <%= simple_format(@job.requirement)%>
     </p>
     <% end %>
 
     <% if @job.apply_info %>
-    <h4>應徵方式</h4>
+    <h3><span class="glyphicon glyphicon glyphicon-envelope" aria-hidden="true"></span>
+      應徵方式</h3>
     <p>
       <%= simple_format(@job.apply_info)%>
     </p>
