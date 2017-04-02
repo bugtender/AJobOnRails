@@ -1,18 +1,20 @@
-#Job on Rails
+# Job on Rails
+
+
+> Notice: This project will no longer update. Thank you.
 
 A Job Board for Ruby or Rails Programmer in Taiwan.
 
-##Screenshot
+## Screenshot
 
 ![Main](http://i.imgur.com/FvLkMJF.jpg)
 
-
-##Job information from..
+## Job information from..
 
 - [Inside Job Board](https://jobs.inside.com.tw/)
 - [Ruby Taiwan Jobs](http://jobs.ruby.tw/)
 
-##Tech Use
+## Tech Use
 
 - [Ruby on Rails](http://rubyonrails.org/) - the origin.
 - [jQuery](https://jquery.com/) - by Bootstrap.
